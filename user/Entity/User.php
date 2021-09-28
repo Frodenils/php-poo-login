@@ -42,7 +42,7 @@ class User {
      */ 
     public function set_password($_password)
     {
-        $this->_password = $_password;
+        $this->_password = password_hash($_password, PASSWORD_BCRYPT);
 
         return $this;
     }

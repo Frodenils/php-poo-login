@@ -36,6 +36,18 @@ try {
             header('Location: index.php');
             exit();
         }
+
+        // Supprimer le type
+        if ($manager->remove($user)) {
+            // On rédige le message qui sera affiché à l'utilisateur
+            $_SESSION['message'] = "Utilisateur supprimé";
+        } else {
+            // On rédige le message d'erreur
+            $_SESSION['error'] = "Une erreur est intervenue";
+        };
+
+        // On renvoie vers la page principale
+        header('Location: index.php');
     } else {
         // On rédige le message d'erreur qui sera affiché à l'utilisateur
         $_SESSION['error'] = "URL invalide";
@@ -47,29 +59,3 @@ try {
 } catch (PDOException $e) {
     print('<br/>Erreur de connexion : ' . $e->getMessage());
 }
-?>
-
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails de l'utilisateur </title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-
-<body>
-    <main class="container">
-        <div class="row">
-            <section class="col-12">
-                <h1>Détails de l'utilisateur <?= $user->getEmail() ?></h1>
-                <p>ID : <?= $user->getId() ?></p>
-                <p>Email : <?= $user->getEmail() ?></p>
-                <p><a href="index.php">Retour</a> <a href="edit.php?id=<?= $user->getId() ?>">Modifier</a></p>
-            </section>
-        </div>
-    </main>
-</body>
-
-</html>

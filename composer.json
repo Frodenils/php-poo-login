@@ -1,0 +1,16 @@
+{
+    "name": "frodnil/php-poo-login",
+    "description": "Projet Poo Login",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "FRODEDELAFORET Nils",
+            "email": "frodnil@ndlp.fr"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "monolog/monolog": "^2.3"
+    }
+}

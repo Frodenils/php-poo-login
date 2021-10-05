@@ -32,13 +32,13 @@
         <h1>Gestion des utilisateurs</h1>
         <table class="table">
           <tr>
-            <td><a href="User/add.php" class="btn btn-primary">Ajouter un utilisateur</a></td>
+            <td><a href="src/add.php" class="btn btn-primary">Ajouter un utilisateur</a></td>
           </tr>
           <tr>
-            <td><a href="User/index.php" class="btn btn-primary">Liste des utilisateurs</a></td>
+            <td><a href="src/index.php" class="btn btn-primary">Liste des utilisateurs</a></td>
           </tr>
           <tr>
-            <td><a href="User/connect.php" class="btn btn-primary">Se connecter</a></td>
+            <td><a href="src/connect.php" class="btn btn-primary">Se connecter</a></td>
           </tr>
         </table>
       </section>

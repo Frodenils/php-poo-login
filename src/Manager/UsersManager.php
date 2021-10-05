@@ -1,4 +1,8 @@
 <?php
+namespace App\Manager;
+
+use PDO;
+use App\Entity\User;
 
 // On inclut la classe User
 require_once('Entity/User.php');

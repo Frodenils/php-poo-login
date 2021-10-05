@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modifier un utilisateur</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+    <main class="container">
+        <div class="row">
+            <section class="col-12">
+                <h1>Modifier un utilisateur</h1>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" class="form-control" value="{{ user.email }}">
+                        <label for="email">Rôles</label>
+                        <input type="text" id="roles" name="roles" class="form-control" value="{{ user.roles }}">
+                    </div>
+                    <input type="hidden" value="{{ user.id }}" name="id">
+                    <button class="btn btn-primary">Enregistrer</button>
+                </form>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>
